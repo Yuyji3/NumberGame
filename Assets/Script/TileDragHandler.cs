@@ -25,7 +25,7 @@ public class TileDrag : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, I
         originalParent = transform.parent;
 
         transform.SetParent(dragParent); // 그리드에서 분리
-        rectTransform.localScale = originalScale * 1.1f;
+        rectTransform.localScale = originalScale * 0.9f;
 
         // ?? 마우스 클릭 위치와 타일 중심 사이의 offset 저장
         RectTransformUtility.ScreenPointToLocalPointInRectangle(

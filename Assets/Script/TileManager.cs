@@ -5,12 +5,21 @@ public class TileManager : MonoBehaviour
 {
     public static TileManager instance;
 
-    public List<Tile> tiles; // 에디터에서 할당
-    public int spawnCount = 2;
+    private List<Tile> tiles = new List<Tile>(); // 자동으로 채움
+    public int spawnCount = 1;
 
     void Awake()
     {
         instance = this;
+
+        // 태그가 "Tile"인 오브젝트들 찾아서 tiles에 추가
+        GameObject[] tileObjects = GameObject.FindGameObjectsWithTag("Tile");
+        foreach (GameObject obj in tileObjects)
+        {
+            Tile tile = obj.GetComponent<Tile>();
+            if (tile != null)
+                tiles.Add(tile);
+        }
     }
 
     void Start()
