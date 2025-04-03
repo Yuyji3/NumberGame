@@ -91,6 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragParent: {fileID: 9081404780600186808}
+  dragCanvas: {fileID: 3049592223609155949, guid: c62af5a608fd8f14d9638d8295c47c63, type: 3}
 --- !u!114 &2507682057249556205
 MonoBehaviour:
   m_ObjectHideFlags: 0
